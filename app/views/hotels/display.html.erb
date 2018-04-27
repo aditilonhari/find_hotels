@@ -1,0 +1,33 @@
+<h1>Hotels Available </h1>
+
+<table>
+    <thead>
+        <tr>
+            <th> Hotel Id </th>
+            <th> Hotel Name </th>
+            <th> Number of Reviews </th>
+            <th> Address </th>
+            <th> Number of Stars </th>
+            <th> Amenities </th>
+            <th> Image </th>
+            <th> Snaptravel Price </th>
+            <th> Hotel.com Price </th>
+        </tr>
+    </thead>
+ 
+    <tbody>
+    <% @hotels.each do |hotel| %>
+        <tr>
+            <th> <%= hotel['id'] %></th>
+            <td> <%= hotel['hotel_name'] %></td>
+            <td> <%= hotel['num_reviews'] %></td>
+            <td> <%= hotel['address'] %></td>
+            <td> <%= hotel['num_stars'] %></td>
+            <td> <%= hotel['amenities'] %></td>
+            <td> <img style='height: 100px; width: 100px;' src= "<%= hotel['image_url']%>"> </td>
+            <td> <%= hotel['price'] %></td>
+            <td> <%= hotel['retail_price'] %></td>
+        </tr>
+    <% end %>
+    </tbody> 
+</table>
